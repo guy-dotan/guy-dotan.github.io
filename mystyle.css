@@ -17,6 +17,13 @@ p { font-family: 'Raleway', sans-serif;
 	text-align: center;
 }
 
+footer {
+	color:white;
+	text-align: right;
+	font-size: 14px; 
+	padding-right: 2%;
+}
+
 .myButton {
 	-moz-box-shadow:inset 1px 1px 0px 0px #3dc21b;
 	-webkit-box-shadow:inset 1px 1px 0px 0px #3dc21b;
@@ -78,6 +85,5 @@ input[type=text] {
     height: 30px;
     width: 250px;
 }
-
 
 </style>
