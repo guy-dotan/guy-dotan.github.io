@@ -7,6 +7,8 @@
 <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 
 
@@ -31,7 +33,7 @@
           <label></label>
           <input name="entry.262822520" type="text" required/>
 
-          <input type="submit" onclick="myFunction()" class="myButton" value="Sign Up for Early Access"/>
+          <input type="submit" onclick="myFunction()" class="myButton" id="register" value="Sign Up for Early Access" disabled="disabled"/>
 
     </form>
 </div>
@@ -40,6 +42,26 @@
 function myFunction() {
   alert("Thank you for submitting! We'll keep you up to date on exciting new developments.");
 }
+</script>
+
+<script type="text/javascript">
+(function() {
+    $('form > input').keyup(function() {
+
+        var empty = false;
+        $('form > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#register').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+        } else {
+            $('#register').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+        }
+    });
+})()
 </script>
 
 </body>
