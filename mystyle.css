@@ -114,6 +114,7 @@ input[type=text] {
   left: 40px;
   opacity: 50%;
   font-weight: bold;
+  text-align: center;
 }
 
 </style>
