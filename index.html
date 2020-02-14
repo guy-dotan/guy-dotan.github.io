@@ -30,12 +30,11 @@
 
 <div class = 'container'>
 <script type="text/javascript">var submitted=false;</script>
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)"></iframe>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted);"></iframe>
 
-    <form class="form" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLScwJIgPwajZAaJyPfxolh9iUHUcrXXhpA_1zv3riWViND0_dg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+    <form class="form" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLScwJIgPwajZAaJyPfxolh9iUHUcrXXhpA_1zv3riWViND0_dg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true; window.location.reload();" novalidate="novalidate">
 
-          <label></label>
-          <input name="entry.262822520" type="text" required/>
+          <input name="entry.262822520" id = "textForm" type="text" required/>
 
           <input type="submit" onclick="myFunction()" class="myButton" id="register" value="Sign Up for Early Access" disabled="disabled"/>
 
@@ -44,7 +43,7 @@
 
 <script>
 function myFunction() {
-  alert("Thank you for submitting! We'll keep you up to date on exciting new developments.");
+    alert("Thank you for submitting! We'll keep you up to date on exciting new developments.");
 }
 </script>
 
@@ -62,7 +61,7 @@ function myFunction() {
         if (empty) {
             $('#register').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
         } else {
-            $('#register').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+            $('#register').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie   
         }
     });
 })()
