@@ -31,9 +31,7 @@
 <script type="text/javascript">var submitted=false;</script>
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted);"></iframe>
 
-    <form class="form" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLScwJIgPwajZAaJyPfxolh9iUHUcrXXhpA_1zv3riWViND0_dg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true; 
-               setTimeout(function () { window.location.reload(); }, 1000);" 
-               novalidate="novalidate">
+    <form class="form" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLScwJIgPwajZAaJyPfxolh9iUHUcrXXhpA_1zv3riWViND0_dg/formResponse" method="post" target="hidden_iframe" onsubmit = mySubmit() >
 
           <input name="entry.262822520" id = "textForm" type="text" required/>
 
@@ -47,6 +45,14 @@ function myFunction() {
     alert("Thank you for submitting! We'll keep you up to date on exciting new developments.");
 }
 </script>
+
+<script>
+function mySubmit() {
+    submitted=true; 
+    setTimeout(function() { window.location.reload(); }, 1000);
+}
+</script>
+
 
 <script type="text/javascript">
 (function() {
